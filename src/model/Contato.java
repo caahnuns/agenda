@@ -49,4 +49,5 @@ public class Contato {
     public void setEnderecos(List<Endereco> enderecos) {
         this.enderecos = enderecos;
     }
+
 }
