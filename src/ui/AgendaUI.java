@@ -18,6 +18,7 @@ public class AgendaUI {
             System.out.println(".:: Boas vindas à sua agenda! ::.");
             System.out.println("Digite uma das opções para começarmos: ");
             System.out.println("1- Adicionar contato");
+            System.out.println("2- Listar todos os contatos");
             System.out.println("0- Sair do sistema");
 
             opcao = scanner.nextInt();
@@ -26,6 +27,9 @@ public class AgendaUI {
             switch (opcao) {
                 case 1 -> {
                     this.adicionar();
+                }
+                case 2 -> {
+                    this.listar();
                 }
                 default -> System.out.println("Ops, opção inválida!");
             }
@@ -40,5 +44,11 @@ public class AgendaUI {
         String sobrenome = scanner.nextLine();
 
         Contato contato = new Contato(nome, sobrenome);
+
+        agenda.adicionar(contato);
+    }
+    public void listar() {
+        System.out.println("-=".repeat(10) + "LISTA DE CONTATOS" + "-=".repeat(10));
+        agenda.listar().forEach((contato) -> System.out.println(contato.getNomeCompleto()));
     }
 }
