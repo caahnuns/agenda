@@ -20,6 +20,12 @@ public class Contato {
         this.enderecos = new ArrayList<>();
     }
 
+    public Contato(String nome, String sobrenome, List<Telefone> telefones) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.telefones = telefones;
+    }
+
     public String getNome() {
         return nome;
     }
