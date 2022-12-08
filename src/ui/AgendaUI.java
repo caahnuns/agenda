@@ -21,6 +21,7 @@ public class AgendaUI {
             System.out.println("0- Sair do sistema");
 
             opcao = scanner.nextInt();
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1 -> {
