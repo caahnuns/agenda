@@ -10,7 +10,7 @@ public class Agenda {
     private List<Contato> contatos;
 
     public Agenda() {
-
+        this.contatos = new ArrayList<>();
     }
 
     public Agenda(List<Contato> contatos) {
