@@ -2,6 +2,8 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Contato {
 
@@ -48,6 +50,13 @@ public class Contato {
 
     public void setEnderecos(List<Endereco> enderecos) {
         this.enderecos = enderecos;
+    }
+
+    public String getNomeCompleto(){
+        return Stream.of(nome, sobrenome)
+                .filter(string -> string != null && !string.isEmpty())
+                .map(String::trim)
+                .collect(Collectors.joining(" "));
     }
 
 }
