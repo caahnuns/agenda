@@ -12,6 +12,10 @@ public class Contato {
     private List<Telefone> telefones;
     private List<Endereco> enderecos;
 
+    public Contato(){
+
+    }
+
     public Contato(String nome, String sobrenome) {
         this.nome = nome;
         this.sobrenome = sobrenome;

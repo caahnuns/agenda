@@ -51,9 +51,20 @@ public class AgendaUI {
 
         List<Telefone> telefones = menuTelefone();
 
-        Contato contato = new Contato(nome, sobrenome, telefones);
+        ContatoController contatoController = new ContatoController();
+        Boolean existeContato = contatoController.verificaContato(agenda.listar(), nome, sobrenome);
+        if(!existeContato) {
 
-        agenda.adicionar(contato);
+            Contato contato = contatoController.adicionarContato(nome, sobrenome);
+            contato.setTelefones(telefones);
+
+            agenda.adicionar(contato);
+
+        }else{
+            System.out.println("Contato Existente");
+        }
+
+
     }
     public void listar() {
         /*
