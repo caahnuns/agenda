@@ -62,6 +62,6 @@ RN3: O sistema não teve permitir adicionar um endereço com os mesmos dados de 
 ## Integrantes do grupo:
 * Andre Camargo
 * Camila Melo
-* Filipe Boddenberg Ribeiro
+* Felipe Fernandes Soares
 * Lucas Aciole Albuquerque
-* Thiago da Silva Costa Santos
+* Thiago Da Silva Costa Santos
